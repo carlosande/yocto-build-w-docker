@@ -1,0 +1,9 @@
+start)
+
+        echo -n "Configuring network interfaces... "
+        sysctl -e -p /etc/sysctl.conf >/dev/null 2>&1
+        ifdown -a
+        ifup -a
+        echo "done."
+        ;;
+        
